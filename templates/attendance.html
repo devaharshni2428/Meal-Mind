@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attendance</title>
+
+    <style>
+        body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+    text-align:center;
+    padding-top:80px;
+}
+
+.attendance-box{
+    background:white;
+    width:500px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.15);
+}
+
+h1{
+    color:green;
+}
+
+input{
+    width:250px;
+    padding:10px;
+    border:2px solid #4caf50;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    background:#4caf50;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#388e3c;
+}
+    </style>
+
+</head>
+
+<body>
+
+<div class="attendance-box">
+
+    <h1>📋 Attendance Page</h1>
+
+    <form method="POST">
+
+        <label>Number of Students Present:</label>
+
+        <br><br>
+
+        <input type="number"
+               name="attendance"
+               placeholder="Enter attendance">
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    {% if attendance %}
+
+<div style="
+margin-top:30px;
+background:#f1f8e9;
+padding:20px;
+border-radius:15px;
+border-left:6px solid green;">
+
+<h2 style="color:green;">
+✅ Attendance Saved Successfully
+</h2>
+
+<h3>👨‍🎓 Students Present : {{ attendance }}</h3>
+
+<h3>🍛 Estimated Food Required : {{ food }} Kg</h3>
+
+<h3>♻ Estimated Food Saved : {{ saved }} Kg</h3>
+
+</div>
+
+{% endif %}
+
+    <br><br>
+
+<a href="/">
+    <button>🏠 Home</button>
+</a>
+
+<a href="/dashboard">
+    <button>📊 Dashboard</button>
+</a>
+
+</div>
+
+</body>
+
+</html>

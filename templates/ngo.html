@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>NGO Redistribution</title>
+
+    <style>
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#f4f6f8;
+            text-align:center;
+            padding-top:50px;
+        }
+
+        .card{
+            background:white;
+            width:500px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 2px 10px lightgray;
+        }
+
+        h1{
+            color:green;
+        }
+
+        button{
+            background:green;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        .status{
+            background:#d4edda;
+            color:#155724;
+            padding:10px;
+            border-radius:8px;
+            font-weight:bold;
+            display:inline-block;
+}
+.alert-message{
+    margin-top:15px;
+    font-weight:bold;
+    color:green;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>NGO Redistribution Center</h1>
+
+    <div class="card">
+
+        <h2>Available Surplus Food</h2>
+
+        <p>{{ saved }} Kg</p>
+
+        <h2>Nearby NGO</h2>
+
+        <p>Helping Hands Foundation</p>
+
+        <h2>Pickup Status</h2>
+
+        <p class="status">🟢 Ready for Pickup</p>
+
+        <button onclick="sendAlert()">Send Alert</button>
+
+<p id="status" class="alert-message"></p>
+
+    </div>
+<script>
+
+function sendAlert(){
+
+    document.getElementById("status").innerHTML =
+    "✅ Alert Sent to NGO Successfully";
+
+}
+
+</script>
+<br><br>
+
+<a href="/dashboard">
+    <button>📊 Dashboard</button>
+</a>
+
+<a href="/">
+    <button>🏠 Home</button>
+</a>
+</body>
+
+</html>

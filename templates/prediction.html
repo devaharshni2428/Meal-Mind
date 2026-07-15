@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Prediction</title>
+
+    <style>
+
+        body{
+            font-family:Arial,sans-serif;
+            background:#f4f6f8;
+            text-align:center;
+            padding-top:100px;
+        }
+
+        h1{
+            color:green;
+        }
+
+        .card{
+            background:white;
+            width:350px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 2px 10px lightgray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Food Prediction</h1>
+
+    <form method="POST">
+
+        <label>Enter Attendance:</label>
+
+        <br><br>
+
+        <input type="number" name="attendance" required>
+
+        <br><br>
+        <label>Select Menu:</label>
+
+<br><br>
+
+<select name="menu">
+
+    <option value="Monday">Monday</option>
+
+    <option value="Tuesday">Tuesday</option>
+
+    <option value="Wednesday">Wednesday</option>
+
+    <option value="Thursday">Thursday</option>
+
+    <option value="Friday">Friday</option>
+
+    <option value="Saturday">Saturday</option>
+
+    <option value="Sunday">Sunday</option>
+
+</select>
+
+<br><br>
+
+        <button type="submit">Predict Food</button>
+
+    </form>
+
+</body>
+
+</html>

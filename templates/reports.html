@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Reports</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+    margin:0;
+    padding:40px;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0px 6px 18px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+h1{
+    color:green;
+}
+
+.summary{
+    background:#e8f5e9;
+    padding:15px;
+    border-radius:12px;
+    margin:20px auto;
+    width:300px;
+    font-size:20px;
+    font-weight:bold;
+    color:#2e7d32;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+th{
+    background:green;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+tr:hover{
+    background:#e8f5e9;
+}
+
+.btn{
+    background:green;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    margin:15px 8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.btn:hover{
+    background:#1b5e20;
+}
+tr:hover{
+background:#dcedc8;
+transition:0.3s;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📑 Attendance Reports</h1>
+
+<div class="summary">
+📋 Total Records : {{ history|length }}
+</div>
+
+<table>
+
+<tr>
+<th>S.No</th>
+<th>Attendance</th>
+<th>Food Required</th>
+<th>Status</th>
+</tr>
+
+{% for record in history %}
+
+<tr>
+<td>{{ loop.index }}</td>
+<td>{{ record[0] }}</td>
+<td>{{ record[1] * 0.8 }} Kg</td>
+<td>✅ Saved</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+<button class="btn">📊 Dashboard</button>
+</a>
+
+<a href="/">
+<button class="btn">🏠 Home</button>
+</a>
+
+</div>
+
+</body>
+
+</html>
+Last Updated: Today
